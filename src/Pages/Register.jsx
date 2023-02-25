@@ -1,31 +1,46 @@
-import { Button } from '@mui/material';
-import React, { useState } from 'react'
-import { toast } from 'react-toastify';
-import Footer from '../Components/Footer';
-import Navbar from '../Components/Navbar';
+import { Button } from "@mui/material";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router";
+import { toast } from "react-toastify";
+import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
+import { addUser } from "../store/slices/user";
 
 const Register = () => {
-    const [data, setData] = useState({
-        name:"",
-        phone:"+998"
-    })
-    function handleInputChange(e) {
-      setData((oldData) => ({
-        ...oldData,
-        [e.target.name]: e.target.value,
-      }));
-    }
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  
+  const user = useSelector((e) => e.user);
+//   console.log(user);
 
-    function handleSubmit(e){
-        e.preventDefault()
-        if(data.name !== "" && data.name !== " ") console.log(data.name);
-        else toast("Enter your name!", {type:"error"})
-        if (data.phone !== "" && data.phone !== " " && data.phone.length >= 14)
-          console.log(data.phone);
-        else toast("Enter your phone number!", { type: "error" });
-        
-    }
-    
+  const [data, setData] = useState({
+    name: "",
+    phone: "+998",
+  });
+  function handleInputChange(e) {
+    setData((oldData) => ({
+      ...oldData,
+      [e.target.name]: e.target.value,
+    }));
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (
+      data.name !== "" &&
+      data.name !== " " &&
+      data.phone !== "" &&
+      data.phone !== " " &&
+      data.phone.length >= 14
+    ) {
+      toast("Registered Successfully", { type: "success" });
+      navigate("/");
+    } else toast("Please fill out the fields!", { type: "error" });
+
+    dispatch(addUser(data));
+  }
+
   return (
     <div className="homebg text-white pt-4">
       <Navbar />
@@ -58,7 +73,8 @@ const Register = () => {
               name="phone"
               type="phone"
             />
-            <Button type='submit'
+            <Button
+              type="submit"
               sx={{ padding: "10px", fontSize: "17px" }}
               variant="contained"
             >
@@ -70,6 +86,6 @@ const Register = () => {
       <Footer />
     </div>
   );
-}
+};
 
-export default Register
+export default Register;
