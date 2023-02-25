@@ -1,0 +1,235 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  background: #000;
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(165, 164, 164);
+  border-radius: 10px;
+}
+
+* {
+  user-select: none;
+}
+
+.navbg {
+  opacity: 0.97;
+  background: radial-gradient(at 18% 99%, rgb(29, 4, 4) 0px, transparent 50%)
+      repeat scroll 0% 0%,
+    radial-gradient(at 97% 8%, rgb(29, 1, 1) 0px, transparent 50%) repeat scroll
+      0% 0%,
+    radial-gradient(at 79% 82%, rgb(0, 0, 0) 0px, transparent 50%) repeat scroll
+      0% 0%,
+    radial-gradient(at 96% 10%, rgb(0, 0, 0) 0px, transparent 50%) repeat scroll
+      0% 0%,
+    radial-gradient(at 42% 20%, rgb(50, 0, 0) 0px, transparent 50%) repeat
+      scroll 0% 0%,
+    radial-gradient(at 4% 49%, rgb(0, 0, 0) 0px, transparent 50%) repeat scroll
+      0% 0%,
+    rgba(0, 0, 0, 0) radial-gradient(at 57% 33%, rgb(0, 0, 0) 0px, #000000 50%)
+      repeat scroll 0% 0%;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.homebg {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  background: radial-gradient(at 18% 99%, rgb(94, 11, 11) 0px, transparent 50%)
+      repeat scroll 0% 0%,
+    radial-gradient(at 97% 8%, rgb(0, 0, 0) 0px, transparent 50%) repeat scroll
+      0% 0%,
+    radial-gradient(at 79% 82%, rgb(0, 0, 0) 0px, transparent 50%) repeat scroll
+      0% 0%,
+    radial-gradient(at 96% 10%, rgb(49, 49, 49) 0px, transparent 50%) repeat
+      scroll 0% 0%,
+    radial-gradient(at 42% 20%, rgb(42, 6, 6) 0px, transparent 50%) repeat
+      scroll 0% 0%,
+    radial-gradient(at 4% 49%, rgb(0, 0, 0) 0px, transparent 50%) repeat scroll
+      0% 0%,
+    rgba(0, 0, 0, 0)
+      radial-gradient(at 57% 33%, rgb(96, 96, 96) 0px, #000000 50%) repeat
+      scroll 0% 0%;
+  background-position: fixed;
+  background-repeat: no-repeat;
+}
+
+.footer {
+  background: rgba(0, 0, 0, 0.356);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.start21Txt {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hoverCard:hover {
+  transition: all 0.3s;
+  transform: scale(0.97);
+  box-shadow: 0 0 0 3px rgb(0, 95, 162);
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  /* HOME */
+
+  .headerTxt {
+    width: 100%;
+    padding: 20px 0 50px;
+  }
+  .headerImg {
+    display: none;
+  }
+  .whyHeader {
+    font-size: 40px;
+  }
+  .whyTxt {
+    font-size: 20px;
+  }
+
+  .footerWrap {
+    flex-direction: column;
+  }
+  .footerWidth {
+    width: 100%;
+  }
+  .contactsHeading {
+    margin-top: 30px;
+  }
+  .footerContacts,
+  .footerLocations {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  /* ABOUT */
+  .aboutImg {
+    width: 100%;
+    display: grid;
+    place-items: center;
+  }
+  .aboutTxt,
+  .courseTxt {
+    width: 100%;
+    font-size: 15px;
+  }
+  .courseWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .cw2 {
+    flex-direction: column-reverse;
+  }
+  .dtmTxt {
+    font-size: 60px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  /* NEWS */
+
+  .newsHeader {
+    font-size: 40px;
+    line-height: normal;
+  }
+  .newsText {
+    font-size: 14px;
+  }
+}
+
+/* News */
+
+@media (max-width: 1100px) {
+  .newsWrapper {
+    height: auto;
+    flex-direction: column;
+  }
+  .newsWrapper span {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  /* CONTACT */
+
+  .contactWrapper {
+    flex-direction: column;
+    gap: 0;
+  }
+  .locationHeader {
+    font-size: 40px;
+  }
+  .contactInfoHeader {
+    font-size: 40px;
+  }
+  .telNum {
+    padding-top: 10px;
+    font-size: 14px;
+  }
+  
+}
+
+@media (max-width: 700px) {
+  /* HOME */
+
+  .start21Txt {
+    font-size: 70px;
+  }
+  .headerTxt {
+    padding-bottom: 0;
+  }
+  .headerText {
+    font-size: 25px;
+  }
+  .whyHeader,
+  .teamHeader,
+  .newsHeader,
+  .resultsHeader {
+    font-size: 40px;
+  }
+  .whyTxt {
+    font-size: 17px;
+  }
+  .whyCards {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .whyCards span {
+    width: 100%;
+  }
+
+  .resultsWrapper {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .scoree {
+    font-size: 40px;
+  }
+  .scoreTxt {
+    font-size: 17px;
+  }
+
+  .footerHeader {
+    font-size: 28px;
+  }
+  .footerContacts {
+    font-size: 14px;
+  }
+
+  /* REGISTER */
+
+  .registerImg{
+    display: none;
+  }
+  .registerForm{
+    padding: 10px;
+    width: 100%;
+  }
+}
