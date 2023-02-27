@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -7,9 +6,6 @@ import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -19,14 +15,14 @@ import { Link, useLocation } from "react-router-dom";
 const drawerWidth = 240;
 
 function Navbar(props) {
-  const location = useLocation()
+  const location = useLocation();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
-  
+
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -36,21 +32,21 @@ function Navbar(props) {
       </Typography>
       <Divider />
       <List className="flex flex-col">
-            <Button sx={{ color: "#000" }}>
-              <Link to="/">Home</Link>
-            </Button>
-            <Button sx={{ color: "#000" }}>
-              <Link to="/about">About</Link>
-            </Button>
-            <Button sx={{ color: "#000" }}>
-              <Link to="/contact">Contact</Link>
-            </Button>
-            <Button sx={{ color: "#000" }}>
-              <Link to="/news">News</Link>
-            </Button>
-            <Button sx={{ color: "#000" }}>
-              <Link to="/register">Register</Link>
-            </Button>
+        <Button sx={{ color: "#000" }}>
+          <Link to="/">Home</Link>
+        </Button>
+        <Button sx={{ color: "#000" }}>
+          <Link to="/about">About</Link>
+        </Button>
+        <Button sx={{ color: "#000" }}>
+          <Link to="/contact">Contact</Link>
+        </Button>
+        <Button sx={{ color: "#000" }}>
+          <Link to="/news">News</Link>
+        </Button>
+        <Button sx={{ color: "#000" }}>
+          <Link to="/register">Register</Link>
+        </Button>
       </List>
     </Box>
   );
@@ -89,81 +85,76 @@ function Navbar(props) {
             </Link>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {location.pathname === "/" ? (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+            <Button
+              sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+            >
+              <Link
+                to="/"
+                className={
+                  location.pathname === "/"
+                    ? "underline underline-offset-2"
+                    : ""
+                }
               >
-                <Link to="/" className="underline underline-offset-2">
-                  Home
-                </Link>
-              </Button>
-            ) : (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+                Home
+              </Link>
+            </Button>
+            <Button
+              sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+            >
+              <Link
+                to="/about"
+                className={
+                  location.pathname === "/about"
+                    ? "underline underline-offset-2"
+                    : ""
+                }
               >
-                <Link to="/">Home</Link>
-              </Button>
-            )}
-            {location.pathname === "/about" ? (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+                About
+              </Link>
+            </Button>
+            <Button
+              sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+            >
+              <Link
+                to="/contact"
+                className={
+                  location.pathname === "/contact"
+                    ? "underline underline-offset-2"
+                    : ""
+                }
               >
-                <Link to="/about" className="underline underline-offset-2">
-                  About
-                </Link>
-              </Button>
-            ) : (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+                Contact
+              </Link>
+            </Button>
+            <Button
+              sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+            >
+              <Link
+                to="/news"
+                className={
+                  location.pathname === "/news"
+                    ? "underline underline-offset-2"
+                    : ""
+                }
               >
-                <Link to="/about">About</Link>
-              </Button>
-            )}
-            {location.pathname === "/contact" ? (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+                News
+              </Link>
+            </Button>
+            <Button
+              sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
+            >
+              <Link
+                to="/register"
+                className={
+                  location.pathname === "/register"
+                    ? "underline underline-offset-2"
+                    : ""
+                }
               >
-                <Link to="/contact" className="underline underline-offset-2">
-                  Contact
-                </Link>
-              </Button>
-            ) : (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
-              >
-                <Link to="/contact">Contact</Link>
-              </Button>
-            )}
-            {location.pathname === "/news" ? (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
-              >
-                <Link to="/news" className="underline underline-offset-2">
-                  News
-                </Link>
-              </Button>
-            ) : (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
-              >
-                <Link to="/news">News</Link>
-              </Button>
-            )}
-            {location.pathname === "/register" ? (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
-              >
-                <Link to="/register" className="underline underline-offset-2">
-                  Register
-                </Link>
-              </Button>
-            ) : (
-              <Button
-                sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
-              >
-                <Link to="/register">Register</Link>
-              </Button>
-            )}
+                Register
+              </Link>
+            </Button>
           </Box>
         </Toolbar>
       </AppBar>
@@ -193,13 +184,5 @@ function Navbar(props) {
     </Box>
   );
 }
-
-// DrawerAppBar.propTypes = {
-//   /**
-//    * Injected by the documentation to work in an iframe.
-//    * You won't need it on your project.
-//    */
-//   window: PropTypes.func,
-// };
 
 export default Navbar;

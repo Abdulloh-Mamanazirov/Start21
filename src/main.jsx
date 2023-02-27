@@ -4,6 +4,9 @@ import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 import { ToastContainer } from 'react-toastify';
 
+// i18n
+import "./i18n/i18n"
+
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
