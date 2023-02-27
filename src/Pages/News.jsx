@@ -41,7 +41,7 @@ const News = () => {
               </span>
             </div>
             <div className="flex flex-wrap justify-center gap-3">
-              {Array(width > 1000 ? 8 : 4)
+              {Array(width > 1000 ? 4 : 2)
                 .fill(0)
                 .map((card,index) => {
                   return (

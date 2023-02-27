@@ -17,7 +17,7 @@ const Contact = () => {
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
                 Chorsu ( Korzinka )
                 <a
-                  href="#"
+                  href="https://goo.gl/maps/w62JjCj8DcbaYyLu7"
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
@@ -27,7 +27,7 @@ const Contact = () => {
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
                 Chorsu
                 <a
-                  href="#"
+                  href="https://goo.gl/maps/PrLxt6ayH5g9UY3q7"
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
@@ -37,7 +37,7 @@ const Contact = () => {
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
                 Oybek Fayz
                 <a
-                  href="#"
+                  href="https://goo.gl/maps/5naTbVbWtb5aLkAQA"
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
@@ -47,7 +47,7 @@ const Contact = () => {
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
                 Do'stlik
                 <a
-                  href="#"
+                  href="https://goo.gl/maps/v6GTkTqVDaMaDBvw5"
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
@@ -57,7 +57,7 @@ const Contact = () => {
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
                 Lola
                 <a
-                  href="#"
+                  href="https://goo.gl/maps/sTUtAhspnQStBqkr7"
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
@@ -88,23 +88,23 @@ const Contact = () => {
               <a href="tel:">+998 89 654 68 89</a>
             </span>
             <span className="flex-wrap flex items-center justify-evenly py-5">
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="#">
+              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://t.me/effortless_education">
                 <i className="fa-2xl pr-3 fa-brands fa-telegram text-sky-600"></i>
                 Telegram
               </a>
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="#">
+              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://www.instagram.com/effortlesseducation/?hl=en">
                 <i className="fa-2xl pr-3 fa-brands fa-instagram text-pink-500"></i>
                 Instagram
               </a>
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="#">
+              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://facebook.com/Start21.lc">
                 <i className="fa-2xl pr-3 fa-brands fa-facebook text-blue-600"></i>
                 Facebook
               </a>
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="#">
+              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://www.youtube.com/@Start21">
                 <i className="fa-2xl pr-3 fa-brands fa-youtube text-red-600"></i>
                 YouTube
               </a>
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="#">
+              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://tiktok.com/@effortlesseducation">
                 <i className="fa-2xl pr-3 fa-brands fa-tiktok text-black"></i>
                 TikTok
               </a>

@@ -12,7 +12,6 @@ const Register = () => {
   const navigate = useNavigate();
   
   const user = useSelector((e) => e.user);
-//   console.log(user);
 
   const [data, setData] = useState({
     name: "",
@@ -40,6 +39,7 @@ const Register = () => {
 
     dispatch(addUser(data));
   }
+  console.log(user);
 
   return (
     <div className="homebg text-white pt-4">
