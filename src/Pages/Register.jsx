@@ -39,10 +39,10 @@ const Register = () => {
 
     dispatch(addUser(data));
   }
-  console.log(user);
+  // console.log(user);
 
   return (
-    <div className="homebg text-white pt-4">
+    <div className="homebg text-white pt-4 min-h-screen flex flex-col justify-between">
       <Navbar />
       <section className="container w-10/12 mx-auto py-5">
         <h2 className="resultsHeader text-center text-[50px] font-bold py-3 pb-10">
@@ -83,7 +83,9 @@ const Register = () => {
           </form>
         </div>
       </section>
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 };
