@@ -5,8 +5,10 @@ import Navbar from "../Components/Navbar";
 import NewsSlider from "../Components/News";
 import Teachers from "../Components/Teachers";
 import Footer from "../Components/Footer";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
+  const {t} = useTranslation()
   return (
     <div className="homebg text-white pt-4">
       <Navbar />
@@ -15,7 +17,7 @@ const Home = () => {
           <div className="headerTxt w-1/2 ">
             <Chip
               sx={{ color: "#dcdcdc", fontWeight: "bolder" }}
-              label="7 Years Complete"
+              label={t("Years")}
               variant="outlined"
             />
             <h1 className="start21Txt text-9xl font-bold py-5">
@@ -31,13 +33,10 @@ const Home = () => {
         </header>
         <section>
           <h2 className="whyHeader text-center text-[50px] font-bold py-10">
-            Why to learn <span className="text-red-500">English</span> with us?
+            {t("WhyHeader")}
           </h2>
           <p className="whyTxt text-center text-[21px] w-10/12 mx-auto">
-            Our classes are fun, effective and affordable. As we employ just the
-            most efficient teachers from all around. With up-to-date methodology
-            and highly qualified teachers we can help you achieve your language
-            goals.
+            {t("WhyText")}
           </p>
           <div className="whyCards flex items-center justify-evenly py-16 text-xl">
             <span className="flex flex-col items-center gap-8 p-4 pt-9 rounded-lg bg-gray-500 bg-opacity-60">

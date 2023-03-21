@@ -11,6 +11,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const drawerWidth = 240;
 
@@ -18,6 +19,7 @@ function Navbar(props) {
   const location = useLocation();
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const {t, i18n} = useTranslation()
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -33,19 +35,19 @@ function Navbar(props) {
       <Divider />
       <List className="flex flex-col">
         <Button sx={{ color: "#000" }}>
-          <Link to="/">Home</Link>
+          <Link to="/">{t("Nav_Home_Link")}</Link>
         </Button>
         <Button sx={{ color: "#000" }}>
-          <Link to="/about">About</Link>
+          <Link to="/about">{t("Nav_About_Link")}</Link>
         </Button>
         <Button sx={{ color: "#000" }}>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact">{t("Nav_Contact_Link")}</Link>
         </Button>
         <Button sx={{ color: "#000" }}>
-          <Link to="/news">News</Link>
+          <Link to="/news">{t("Nav_News_Link")}</Link>
         </Button>
         <Button sx={{ color: "#000" }}>
-          <Link to="/register">Register</Link>
+          <Link to="/register">{t("Nav_Register_Link")}</Link>
         </Button>
       </List>
     </Box>
@@ -54,6 +56,10 @@ function Navbar(props) {
   const container =
     window !== undefined ? () => window().document.body : undefined;
 
+  function handleChangleLang(e){
+    i18n.changeLanguage(e.target.value)
+  }
+    
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -96,7 +102,7 @@ function Navbar(props) {
                     : ""
                 }
               >
-                Home
+                {t("Nav_Home_Link")}
               </Link>
             </Button>
             <Button
@@ -110,7 +116,7 @@ function Navbar(props) {
                     : ""
                 }
               >
-                About
+                {t("Nav_About_Link")}
               </Link>
             </Button>
             <Button
@@ -124,7 +130,7 @@ function Navbar(props) {
                     : ""
                 }
               >
-                Contact
+                {t("Nav_Contact_Link")}
               </Link>
             </Button>
             <Button
@@ -138,7 +144,7 @@ function Navbar(props) {
                     : ""
                 }
               >
-                News
+                {t("Nav_News_Link")}
               </Link>
             </Button>
             <Button
@@ -152,9 +158,14 @@ function Navbar(props) {
                     : ""
                 }
               >
-                Register
+                {t("Nav_Register_Link")}
               </Link>
             </Button>
+            <select className="text-black" onChange={handleChangleLang}>
+              <option value="en">English</option>
+              <option value="uz">O'zbek</option>
+              <option value="ru">Pусский</option>
+            </select>
           </Box>
         </Toolbar>
       </AppBar>
