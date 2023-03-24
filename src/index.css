@@ -11,10 +11,6 @@
   border-radius: 10px;
 }
 
-* {
-  user-select: none;
-}
-
 .navbg {
   opacity: 0.97;
   background: radial-gradient(at 18% 99%, rgb(29, 4, 4) 0px, transparent 50%)
@@ -59,6 +55,22 @@
   background-repeat: no-repeat;
 }
 
+.navLinkBtn{
+  text-transform: capitalize !important;
+}
+.navSelect{
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 9999;
+  display: none;
+}
+@media (max-width:600px) {
+  .navSelect{
+    display: block;
+  }
+}
+
 .footer {
   background: rgba(0, 0, 0, 0.356);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -68,6 +80,7 @@
 
 .start21Txt {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  white-space: nowrap;
 }
 
 .hoverCard:hover {
@@ -100,6 +113,7 @@
   }
   .footerWidth {
     width: 100%;
+    font-size: 15px;
   }
   .contactsHeading {
     margin-top: 30px;
@@ -191,8 +205,8 @@
   .whyHeader,
   .teamHeader,
   .newsHeader,
-  .resultsHeader {
-    font-size: 40px;
+  .resultsHeader, .engrussian {
+    font-size: 35px;
   }
   .whyTxt {
     font-size: 17px;

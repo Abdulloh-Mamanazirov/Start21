@@ -85,13 +85,13 @@ function Navbar(props) {
           >
             <Link
               to="/"
-              className="bg-slate-500 bg-opacity-40 rounded-lg px-3 py-1 font-bold"
+              className="bg-slate-500 bg-opacity-40 rounded-lg px-3 py-1 font-bold whitespace-nowrap"
             >
               START <span className="text-red-500">21</span>
             </Link>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Button
+            <Button className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -105,7 +105,7 @@ function Navbar(props) {
                 {t("Nav_Home_Link")}
               </Link>
             </Button>
-            <Button
+            <Button className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -119,7 +119,7 @@ function Navbar(props) {
                 {t("Nav_About_Link")}
               </Link>
             </Button>
-            <Button
+            <Button className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -133,7 +133,7 @@ function Navbar(props) {
                 {t("Nav_Contact_Link")}
               </Link>
             </Button>
-            <Button
+            <Button className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -147,7 +147,7 @@ function Navbar(props) {
                 {t("Nav_News_Link")}
               </Link>
             </Button>
-            <Button
+            <Button className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -161,11 +161,12 @@ function Navbar(props) {
                 {t("Nav_Register_Link")}
               </Link>
             </Button>
-            <select className="text-black" onChange={handleChangleLang}>
-              <option value="en">English</option>
-              <option value="uz">O'zbek</option>
-              <option value="ru">Pусский</option>
+            <select className="text-white border rounded-full p-1 text-[17px] border-white bg-transparent" onChange={handleChangleLang}>
+              <option className="text-black" value="en">English</option>
+              <option className="text-black" value="uz">O'zbek</option>
+              <option className="text-black" value="">Pусский</option>
             </select>
+            
           </Box>
         </Toolbar>
       </AppBar>

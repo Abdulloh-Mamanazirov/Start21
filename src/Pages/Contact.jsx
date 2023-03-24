@@ -1,8 +1,10 @@
 import React from "react";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import {useTranslation} from "react-i18next"
 
 const Contact = () => {
+  const {t} = useTranslation()
   return (
     <div className="homebg text-white pt-4">
       <Navbar />
@@ -11,7 +13,7 @@ const Contact = () => {
           <img className="w-1/2" src="/location.png" alt="location" />
           <span className="w-80">
             <h2 className="locationHeader text-center text-[55px] font-bold py-10">
-              Locations :
+              {t("locations")}:
             </h2>
             <ul>
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
@@ -21,7 +23,7 @@ const Contact = () => {
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
-                  See in Maps <i className="fa-solid fa-link"></i>
+                  {t("seeMaps")} <i className="fa-solid fa-link"></i>
                 </a>
               </li>
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
@@ -31,7 +33,7 @@ const Contact = () => {
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
-                  See in Maps <i className="fa-solid fa-link"></i>
+                  {t("seeMaps")} <i className="fa-solid fa-link"></i>
                 </a>
               </li>
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
@@ -41,7 +43,7 @@ const Contact = () => {
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
-                  See in Maps <i className="fa-solid fa-link"></i>
+                  {t("seeMaps")} <i className="fa-solid fa-link"></i>
                 </a>
               </li>
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
@@ -51,7 +53,7 @@ const Contact = () => {
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
-                  See in Maps <i className="fa-solid fa-link"></i>
+                  {t("seeMaps")} <i className="fa-solid fa-link"></i>
                 </a>
               </li>
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
@@ -61,7 +63,7 @@ const Contact = () => {
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
-                  See in Maps <i className="fa-solid fa-link"></i>
+                  {t("seeMaps")} <i className="fa-solid fa-link"></i>
                 </a>
               </li>
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">
@@ -71,7 +73,7 @@ const Contact = () => {
                   target="_blank"
                   className="opacity-80 text-sm hover:text-sky-500 font-light"
                 >
-                  See in Maps <i className="fa-solid fa-link"></i>
+                  {t("seeMaps")} <i className="fa-solid fa-link"></i>
                 </a>
               </li>
             </ul>
@@ -79,7 +81,7 @@ const Contact = () => {
         </div>
         <div>
           <h2 className="contactInfoHeader text-center text-[55px] font-bold pt-10">
-            Contact <span className="text-red-500">Info</span>
+            {t("contactText")} <span className="text-red-500">{t("contactTextEnd")}</span>
           </h2>
           <div>
             <span className="telNum w-full flex justify-around flex-wrap text-xl pt-3">

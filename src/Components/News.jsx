@@ -1,8 +1,10 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import NewsCard from "./NewsCard";
 
 export default function NewsSlider() {
+  const {t}=useTranslation()
   var settings = {
     dots: true,
     infinite: true,
@@ -41,43 +43,43 @@ export default function NewsSlider() {
       <NewsCard
         image="https://media.istockphoto.com/id/865729776/photo/hand-with-scissors-cutting-red-ribbon-opening-ceremony.jpg?s=612x612&w=0&k=20&c=MCbqMZtCY_Eh8ckv6LPfh3aQufHShiIdYL1-g7xMchU="
         exp="7"
-        name="Opening Cere mony of a new brach "
+        name={t("NewsText")}
         seen="45"
       />
       <NewsCard
         image="/start_league.jpg"
         exp="3"
-        name="Start21 League is about to begin"
+        name={t("NewsText2")}
         seen="37"
       />
       <NewsCard
         image="https://media.istockphoto.com/id/865729776/photo/hand-with-scissors-cutting-red-ribbon-opening-ceremony.jpg?s=612x612&w=0&k=20&c=MCbqMZtCY_Eh8ckv6LPfh3aQufHShiIdYL1-g7xMchU="
         exp="5"
-        name="Opening Cere mony of a new brach "
+        name={t("NewsText")}
         seen="50"
       />
       <NewsCard
         image="/start_league.jpg"
         exp="4"
-        name="Start21 League is about to begin"
+        name={t("NewsText2")}
         seen="27"
       />
       <NewsCard
         image="https://media.istockphoto.com/id/865729776/photo/hand-with-scissors-cutting-red-ribbon-opening-ceremony.jpg?s=612x612&w=0&k=20&c=MCbqMZtCY_Eh8ckv6LPfh3aQufHShiIdYL1-g7xMchU="
         exp="8"
-        name="Opening Cere mony of a new brach "
+        name={t("NewsText")}
         seen="19"
       />
       <NewsCard
         image="https://media.istockphoto.com/id/865729776/photo/hand-with-scissors-cutting-red-ribbon-opening-ceremony.jpg?s=612x612&w=0&k=20&c=MCbqMZtCY_Eh8ckv6LPfh3aQufHShiIdYL1-g7xMchU="
         exp="5"
-        name="Opening Cere mony of a new brach "
+        name={t("NewsText")}
         seen="33"
       />
       <NewsCard
         image="/start_league.jpg"
         exp="6"
-        name="Start21 League is about to begin"
+        name={t("NewsText2")}
         seen="21"
       />
     </Slider>

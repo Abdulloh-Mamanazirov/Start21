@@ -1,7 +1,9 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const {t}=useTranslation()
   return (
     <div className="footer">
       <div className="footerWrap container w-11/12 mx-auto flex  justify-between py-4">
@@ -51,7 +53,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-1/3 footerWidth">
-          <h2 className="contactsHeading text-xl font-[700] pb-3">Contacts</h2>
+          <h2 className="contactsHeading text-xl font-[700] pb-3">{t("Nav_Contact_Link")}</h2>
           <ul className="footerContacts flex flex-col gap-1">
             <li>
               <a
@@ -81,21 +83,21 @@ const Footer = () => {
         </div>
       </div>
       <div className="container w-11/12 mx-auto py-4">
-        <span className="w-2/5 footerWidth flex items-center justify-between text-lg">
+        <span className="w-2/5 footerWidth flex flex-wrap items-center justify-between text-lg">
           <Link className="opacity-75 hover:opacity-100" to="/">
-            Home
+            {t("Nav_Home_Link")}
           </Link>
           <Link className="opacity-75 hover:opacity-100" to="/about">
-            About
+            {t("Nav_About_Link")}
           </Link>
           <Link className="opacity-75 hover:opacity-100" to="/contact">
-            Contact
+            {t("Nav_Contact_Link")}
           </Link>
           <Link className="opacity-75 hover:opacity-100" to="/news">
-            News
+            {t("Nav_News_Link")}
           </Link>
           <Link className="opacity-75 hover:opacity-100" to="/register">
-            Register
+            {t("Nav_Register_Link")}
           </Link>
         </span>
       </div>

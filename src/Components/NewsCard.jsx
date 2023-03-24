@@ -1,13 +1,14 @@
 import * as React from "react";
-import VerifiedIcon from "@mui/icons-material/Verified";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function NewsCard(props) {
+  const {t} = useTranslation()
   return (
     <Card
       className="newsCard hoverCard"
@@ -36,7 +37,7 @@ export default function NewsCard(props) {
               {props.seen}
             </span>
             <Link to="/news" className="hover:text-sky-500 hover:decoration-sky-400 hover:underline">
-              Read More <i className="fa-solid fa-chevron-right"></i>
+               {t("NewsLink")} <i className="fa-solid fa-chevron-right"></i>
             </Link>
           </div>
         </CardContent>
