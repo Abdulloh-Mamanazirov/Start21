@@ -12,6 +12,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { Dropdown } from 'antd';
+
 
 const drawerWidth = 240;
 
@@ -20,7 +22,29 @@ function Navbar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const {t, i18n} = useTranslation()
-
+  const items = [
+  {
+    label: (
+      <span className="px-5" onClick={(e)=> i18n.changeLanguage("en")}>
+        English
+      </span>
+    ),
+  },
+  {
+    label: (
+      <span className="px-5" onClick={(e)=> i18n.changeLanguage("uz")}>
+        Uzbek
+      </span>
+    ),
+  },
+  {
+    label: (
+      <span className="px-5" onClick={(e)=> i18n.changeLanguage("")}>
+        Русский
+      </span>
+    ),
+  }
+];
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
   };
@@ -63,7 +87,7 @@ function Navbar(props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar className="navbg text-xl py-[5px]" component="nav">
+      <AppBar className="navbg text-xl" component="nav">
         <Toolbar>
           <IconButton
             color="inherit"
@@ -161,12 +185,9 @@ function Navbar(props) {
                 {t("Nav_Register_Link")}
               </Link>
             </Button>
-            <select className="text-white border rounded-full p-1 text-[17px] border-white bg-transparent" onChange={handleChangleLang}>
-              <option className="text-black" value="en">English</option>
-              <option className="text-black" value="uz">O'zbek</option>
-              <option className="text-black" value="">Pусский</option>
-            </select>
-            
+            <Dropdown menu={{items,}} className="navSelect" placement="bottomRight" trigger={"click"} arrow={{pointAtCenter: true,}}>
+              <Button><svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" height="30" width="30" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"></path></svg></Button>
+            </Dropdown>
           </Box>
         </Toolbar>
       </AppBar>

@@ -8,20 +8,10 @@ import Footer from "../Components/Footer";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
-  const {t,i18n} = useTranslation()
-
-  function handleChangleLang(e) {
-    i18n.changeLanguage(e.target.value);
-  }
-  
+  const {t} = useTranslation()
   return (
     <div className="homebg text-white pt-4">
       <Navbar />
-      <select className="navSelect text-white border rounded-full p-1 text-[17px] border-white bg-transparent" onChange={handleChangleLang}>
-              <option className="text-black" value="en">English</option>
-              <option className="text-black" value="uz">O'zbek</option>
-              <option className="text-black" value="">Pусский</option>
-            </select>
       <div className="container w-10/12 mx-auto">
         <header className=" py-5 flex items-center">
           <div className="headerTxt w-1/2 ">
