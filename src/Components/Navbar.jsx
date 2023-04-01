@@ -103,8 +103,9 @@ function Navbar(props) {
             component="div"
             sx={{
               flexGrow: 1,
-              display: { xs: "none", sm: "block" },
+              display: { xs: "block", sm: "block" },
               fontSize: "33px",
+              fontSize: { xs: "21px",sm:"33px", md: "33px", lg: "33px", xl: "33px" },
             }}
           >
             <Link
@@ -115,7 +116,8 @@ function Navbar(props) {
             </Link>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            <Button className="navLinkBtn "
+            <Button
+              className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -129,7 +131,8 @@ function Navbar(props) {
                 {t("Nav_Home_Link")}
               </Link>
             </Button>
-            <Button className="navLinkBtn "
+            <Button
+              className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -143,7 +146,8 @@ function Navbar(props) {
                 {t("Nav_About_Link")}
               </Link>
             </Button>
-            <Button className="navLinkBtn "
+            <Button
+              className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -157,7 +161,8 @@ function Navbar(props) {
                 {t("Nav_Contact_Link")}
               </Link>
             </Button>
-            <Button className="navLinkBtn "
+            <Button
+              className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -171,7 +176,8 @@ function Navbar(props) {
                 {t("Nav_News_Link")}
               </Link>
             </Button>
-            <Button className="navLinkBtn "
+            <Button
+              className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
@@ -185,10 +191,33 @@ function Navbar(props) {
                 {t("Nav_Register_Link")}
               </Link>
             </Button>
-            <Dropdown menu={{items,}} className="navSelect" placement="bottomRight" trigger={"click"} arrow={{pointAtCenter: true,}}>
-              <Button><svg stroke="currentColor" fill="none" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true" height="30" width="30" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"></path></svg></Button>
-            </Dropdown>
           </Box>
+            <Dropdown
+              menu={{ items }}
+              className="navSelect"
+              placement="bottomRight"
+              trigger={"click"}
+              arrow={{ pointAtCenter: true }}
+            >
+              <Button>
+                <svg
+                  stroke="currentColor"
+                  fill="none"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  height="30"
+                  width="30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+                  ></path>
+                </svg>
+              </Button>
+            </Dropdown>
         </Toolbar>
       </AppBar>
       <Box component="nav">

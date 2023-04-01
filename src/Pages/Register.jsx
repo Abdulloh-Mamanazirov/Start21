@@ -1,21 +1,16 @@
 import { Button } from "@mui/material";
-import axios, { Axios } from "axios";
+import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { toast } from "react-toastify";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
-import { addUser } from "../store/slices/user";
 
 const Register = () => {
   const {t} = useTranslation()
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   let courseSelect = useRef("")
-
-  const user = useSelector((e) => e.user);
 
   const [data, setData] = useState({
     name: "",
@@ -32,25 +27,19 @@ const Register = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    console.log(data);
+    if (data.name === "" || data.name === " ")
+      return toast(t("toastNameErr"), { type: "error" });
+    if (data.phone === "" || data.phone === " " || data.phone.length <= 12)
+      return toast(t("toastPhoneErr"), { type: "error" });
     if (
-      data.name !== "" &&
-      data.name !== " " &&
-      data.phone !== "" &&
-      data.phone !== " " &&
-      data.phone.length >= 14 &&
-      data.course !== "none" &&
-      data.course !== undefined &&
-      data.course !== ""
-    ) {
-      await axios.post("http://localhost:2100/api/create",data)
-      toast("Registered Successfully", { type: "success" });
-      navigate("/");
-    } else toast("Please fill out the fields!", { type: "error" });
-
-    dispatch(addUser(data));
+      data.course === "none" ||
+      data.course === "" ||
+      data.course === undefined
+    )
+      return toast(t("toastCourseErr"), { type: "error" });
+    await axios.post("/register", data);
+    toast(`${t("toastRegistered")}`, { type: "success" });
   }
-  // console.log(user);
 
   return (
     <div className="homebg text-white pt-4 min-h-screen flex flex-col justify-between">
@@ -78,7 +67,7 @@ const Register = () => {
               value={data.name}
               name="name"
               type="text"
-              placeholder="Full Name"
+              placeholder={t("RegisterInputPlaceholder")}
             />
             <input
               className="p-3 rounded-md focus:outline-8 outline-sky-500"
@@ -88,18 +77,19 @@ const Register = () => {
               type="phone"
             />
             <select onChange={handleInputChange} ref={courseSelect} name="course" className="p-4 rounded-md focus:outline-8 outline-sky-500">
-              <option className="text-zinc-500" value="none">Select a course</option>
-              <option value="ielts">IELTS</option>
-              <option value="ielts_intensive">IELTS Intensive</option>
-              <option value="eng_kids">English for kids</option>
-              <option value="eng_rus">English in Russian</option>
+              <option className="text-zinc-500" value="none">{t("RegisterSelectCourse")}</option>
+              <option value="IELTS">IELTS (General English)</option>
+              <option value="Intensive IELTS">Intensive IELTS</option>
+              <option value="Kids English">English for kids</option>
+              <option value="English in Russian">English in Russian</option>
+              <option value="DTM">DTM</option>
             </select>
             <Button
               type="submit"
               sx={{ padding: "10px", fontSize: "17px" }}
               variant="contained"
             >
-              Submit
+              {t("RegisterSubmitBtn")}
             </Button>
           </form>
         </div>

@@ -82,6 +82,17 @@
   white-space: nowrap;
 }
 
+.mytransition{
+  transition: all .3s;
+}
+.regbtn:hover{
+  border:transparent;
+  background: linear-gradient(to bottom right, red,black);
+}
+.regbtn:hover i{
+  padding-left: 16px;
+}
+
 .hoverCard:hover {
   transition: all 0.3s;
   transform: scale(0.97);
@@ -244,5 +255,17 @@
   .registerForm{
     padding: 10px;
     width: 100%;
+  }
+}
+
+@media (max-width:400px) {
+  .start21Txt{
+    font-size: 50px;
+  }
+  .headerText{
+    font-size: 20px;
+  }
+  .regbtn{
+    font-size: 15px;
   }
 }

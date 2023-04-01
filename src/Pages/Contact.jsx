@@ -13,7 +13,7 @@ const Contact = () => {
           <img className="w-1/2" src="/location.png" alt="location" />
           <span className="w-80">
             <h2 className="locationHeader text-center text-[55px] font-bold py-10">
-              {t("locations")}:
+              {t("locations")}
             </h2>
             <ul>
               <li className="text-xl font-semibold pb-3 flex items-center justify-between">

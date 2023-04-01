@@ -18,10 +18,12 @@ i18n.use(initReactI18next).init({
         WhyHeader: `Why to learn `,
         English: "English",
         EnglishEnding: "with us?",
+        RegisterLinkBtn:"Register Now",
+        // Why
         WhyText: `Our classes are fun, effective and affordable. As we employ just the most efficient teachers from all around, you will learn well and fast. With up-to-date methodology and highly qualified teachers we can help you achieve your language goals.`,
         CreativeTeachers:"Creative teachers",
         HighScores:"High IELTS scores",
-        EnglishEnvironment:"English Environment",
+        EnglishEnvironment:"Real English Environment",
         // Teachers
         TeamText:"Our ",
         TeamTextEnd:"Team",
@@ -40,14 +42,22 @@ i18n.use(initReactI18next).init({
         OurStudentsResults:"Results",
         IeltsScore:"IELTS score ",
         // Contact
-        locations:"Locations ",
+        locations:"Locations:",
         seeMaps:"See in Maps",
         contactText:"Contact",
-        contactTextEnd:"Info",
+        contactTextEnd:"Us:",
         // Register
         RegisterHeader:"Register to our ",
         RegisterHeaderEnd:"Courses",
-        RegisterText:"Fill the required fields below. We will contact you as soon as possible and answer your questions. Thank you."
+        RegisterText:"Fill the required fields below. We will contact you as soon as possible and answer your questions. Thank you.",
+        RegisterInputPlaceholder:"Full Name",
+        RegisterSelectCourse:"Select a course",
+        RegisterSubmitBtn:"Submit",
+        // Toast
+        toastNameErr:"Please, enter your name!",
+        toastPhoneErr:"Please, enter your phone number correctly!",
+        toastCourseErr:"Please, select a course!",
+        toastRegistered:"Registered Successfully!"
       },
     },
     uz: {
@@ -63,11 +73,13 @@ i18n.use(initReactI18next).init({
         WhyHeader: `Nima uchun `,
         English: "Ingliz",
         EnglishEnding: "tilini biz bilan o'rganishingiz kerak?",
+        RegisterLinkBtn:"Ro'yxatdan o'ting",
+        // Why
         WhyText:
           "Darslarimiz qiziqarli, foydali va hamyonbop. Biz har tomondan eng samarali o'qituvchilarni ish bilan ta'minlaganimiz uchun, siz darslarni tez va yaxshi o'zlashtirasiz. Zamonaviy uslublar va yuqori malakali o'qituvchilar bilan biz sizga o'z maqsadlaringizga erishishingizga yordam bera olamiz.",
         CreativeTeachers:"Yaratuvchan o'qituvchilar",  
         HighScores:"Yuqori IELTS natijalar",
-        EnglishEnvironment:"Ingliz tilidagi muhit",
+        EnglishEnvironment:"Haqiqiy Ingliz tili muhiti",
         // Teachers
         TeamText:"Bizning ",
         TeamTextEnd:"Jamoa",
@@ -86,14 +98,22 @@ i18n.use(initReactI18next).init({
         OurStudentsResults:"Natijalari",
         IeltsScore:"IELTS natijalar ",
         // Contact
-        locations:"Manzillarimiz ",
+        locations:"Manzillarimiz:",
         seeMaps:"Xaritada ko'rish",
-        contactText:"Bog'lanish",
-        contactTextEnd:"Usullari",
+        contactText:"Biz bilan",
+        contactTextEnd:"bog'laning :",
         // Register
-        RegisterHeader:"ro'yxatdan o'ting",
+        RegisterHeader:"Ro'yxatdan O'ting",
         RegisterHeaderEnd:"Kurslarimizga",
-        RegisterText:"Telefon raqamingizni qoldiring, biz sizga qo'ng'iroq qilamiz va birorta ham savolingizni javobsiz qoldirmaslikga harakat qilamiz."
+        RegisterText:"Telefon raqamingizni qoldiring, biz sizga qo'ng'iroq qilamiz va birorta ham savolingizni javobsiz qoldirmaslikga harakat qilamiz.",
+        RegisterInputPlaceholder:"To'liq Ismingiz",
+        RegisterSelectCourse:"Kurs tanlang",
+        RegisterSubmitBtn:"Yuborish",
+        // Toast
+        toastNameErr:"Iltimos, ismingizni kiriting!",
+        toastPhoneErr:"Iltimos, telefon raqamingizni tekshiring!",
+        toastCourseErr:"Iltimos, kurs tanlang!",
+        toastRegistered:"Muvaffaqqiyatli ro'yxatdan o'tildi!"
       },
     },
   },
