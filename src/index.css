@@ -202,9 +202,11 @@
 
 @media (max-width: 700px) {
   /* HOME */
-
+  .homeHeader{
+    margin-bottom: 50px;
+  }
   .start21Txt {
-    font-size: 70px;
+    font-size: 85px;
   }
   .headerTxt {
     padding-bottom: 0;
@@ -260,7 +262,7 @@
 
 @media (max-width:400px) {
   .start21Txt{
-    font-size: 50px;
+    font-size: 70px;
   }
   .headerText{
     font-size: 20px;

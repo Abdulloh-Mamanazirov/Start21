@@ -49,7 +49,7 @@ const Home = () => {
       <Navbar />
       <div className="container w-10/12 mx-auto">
         {/* Header */}
-        <header className=" py-5 flex items-center">
+        <header className="homeHeader py-5 flex items-center">
           <div className="headerTxt w-1/2 ">
             <Chip
               sx={{ color: "#dcdcdc", fontWeight: "bolder" }}
@@ -78,7 +78,7 @@ const Home = () => {
         <section>
           <h2 className="whyHeader text-center text-[50px] font-bold py-10">
             {t("WhyHeader")}
-            <span className="text-red-500">{t("English ")}</span>
+            <span className="text-red-500">{t("English")}</span>
             {t("EnglishEnding")}
           </h2>
           <p className="whyTxt text-center text-[21px] w-10/12 mx-auto">

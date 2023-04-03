@@ -39,7 +39,7 @@ function Navbar(props) {
   },
   {
     label: (
-      <span className="px-5" onClick={(e)=> i18n.changeLanguage("")}>
+      <span className="px-5" onClick={(e)=> i18n.changeLanguage("ru")}>
         Русский
       </span>
     ),

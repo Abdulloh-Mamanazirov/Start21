@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -10,7 +11,7 @@ import Navbar from "../Components/Navbar";
 const Register = () => {
   const {t} = useTranslation()
   const navigate = useNavigate();
-  let courseSelect = useRef("")
+  const button = useRef("")
 
   const [data, setData] = useState({
     name: "",
@@ -46,7 +47,17 @@ const Register = () => {
       <Navbar />
       <section className="container w-10/12 mx-auto py-5">
         <h2 className="resultsHeader text-center text-[50px] font-bold py-3 pb-10">
-           {t("NewsHeader") !== "So'nggi" ? <>{t("RegisterHeader")}<span className="text-red-500">{t("RegisterHeaderEnd")}</span></> : <><span className="text-red-500">{t("RegisterHeaderEnd")} </span>{t("RegisterHeader")}</>}
+          {t("NewsHeader") !== "So'nggi" ? (
+            <>
+              {t("RegisterHeader")}
+              <span className="text-red-500">{t("RegisterHeaderEnd")}</span>
+            </>
+          ) : (
+            <>
+              <span className="text-red-500">{t("RegisterHeaderEnd")} </span>
+              {t("RegisterHeader")}
+            </>
+          )}
         </h2>
         <div className="w-full flex items-center gap-10 p-3 bg-black bg-opacity-40 rounded-xl">
           <img
@@ -58,9 +69,7 @@ const Register = () => {
             onSubmit={handleSubmit}
             className="registerForm w-1/2 text-black flex flex-col gap-5"
           >
-            <p className="text-slate-300 text-lg">
-              {t("RegisterText")}
-            </p>
+            <p className="text-slate-300 text-lg">{t("RegisterText")}</p>
             <input
               className="p-3 rounded-md focus:outline-8 outline-sky-500"
               onChange={handleInputChange}
@@ -76,8 +85,14 @@ const Register = () => {
               name="phone"
               type="phone"
             />
-            <select onChange={handleInputChange} ref={courseSelect} name="course" className="p-4 rounded-md focus:outline-8 outline-sky-500">
-              <option className="text-zinc-500" value="none">{t("RegisterSelectCourse")}</option>
+            <select
+              onChange={handleInputChange}
+              name="course"
+              className="p-4 rounded-md focus:outline-8 outline-sky-500"
+            >
+              <option className="text-zinc-500" value="none">
+                {t("RegisterSelectCourse")}
+              </option>
               <option value="IELTS">IELTS (General English)</option>
               <option value="Intensive IELTS">Intensive IELTS</option>
               <option value="Kids English">English for kids</option>
@@ -85,9 +100,11 @@ const Register = () => {
               <option value="DTM">DTM</option>
             </select>
             <Button
+            ref={button}
               type="submit"
               sx={{ padding: "10px", fontSize: "17px" }}
               variant="contained"
+              endIcon={<SendIcon />}
             >
               {t("RegisterSubmitBtn")}
             </Button>

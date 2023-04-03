@@ -83,7 +83,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container w-11/12 mx-auto py-4">
-        <span className="w-2/5 footerWidth flex flex-wrap items-center justify-between text-lg">
+        <span className="w-3/6 footerWidth flex flex-wrap items-center justify-between text-lg">
           <Link className="opacity-75 hover:opacity-100" to="/">
             {t("Nav_Home_Link")}
           </Link>
