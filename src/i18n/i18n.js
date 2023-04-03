@@ -15,11 +15,11 @@ i18n.use(initReactI18next).init({
         Nav_Register_Link: "Register",
         // Home
         Years: "7 Years Complete",
+        RegisterLinkBtn: "Register Now",
         // Why
         WhyHeader: `Why to learn `,
         English: "English ",
         EnglishEnding: "with us?",
-        RegisterLinkBtn: "Register Now",
         WhyText: `Our classes are fun, effective and affordable. As we employ just the most efficient teachers from all around, you will learn well and fast. With up-to-date methodology and highly qualified teachers we can help you achieve your language goals.`,
         CreativeTeachers: "Creative teachers",
         HighScores: "High IELTS scores",
@@ -71,11 +71,11 @@ i18n.use(initReactI18next).init({
         Nav_Register_Link: "Ro'yxatdan o'tish",
         // Home
         Years: "7 Yil Siz Bilan",
+        RegisterLinkBtn: "Ro'yxatdan o'ting",
         // Why
         WhyHeader: `Nima uchun `,
         English: "Ingliz ",
         EnglishEnding: "tilini biz bilan o'rganishingiz kerak?",
-        RegisterLinkBtn: "Ro'yxatdan o'ting",
         WhyText:
           "Darslarimiz qiziqarli, foydali va hamyonbop. Biz har tomondan eng samarali o'qituvchilarni ish bilan ta'minlaganimiz uchun, siz darslarni tez va yaxshi o'zlashtirasiz. Zamonaviy uslublar va yuqori malakali o'qituvchilar bilan biz sizga o'z maqsadlaringizga erishishingizga yordam bera olamiz.",
         CreativeTeachers: "Yaratuvchan o'qituvchilar",
@@ -129,11 +129,11 @@ i18n.use(initReactI18next).init({
         Nav_Register_Link: "Зарегистрироваться",
         // Home
         Years: "С тобой 7 лет",
+        RegisterLinkBtn: "Зарегистрироваться",
         // Why
         WhyHeader: `Почему вам стоит учить `,
         English: "Aнглийский  ",
         EnglishEnding: "с нами?",
-        RegisterLinkBtn: "Зарегистрироваться сейчас",
         WhyText:
           "Наши занятия веселые, полезные и доступные. Поскольку у нас работают самые эффективные преподаватели со всего мира, вы быстро и хорошо освоите уроки. Благодаря современным методикам и высококвалифицированным преподавателям мы можем помочь вам в достижении ваших целей.",
         CreativeTeachers: "Креативные учителя",

@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { Chip, Button } from "@mui/material";
+import SendIcon from "@mui/icons-material/Send";
 import CountUp from "react-countup";
 import Navbar from "../Components/Navbar";
 import NewsSlider from "../Components/News";
@@ -202,6 +203,7 @@ const Home = () => {
                 type="submit"
                 sx={{ padding: "10px", fontSize: "17px" }}
                 variant="contained"
+              endIcon={<SendIcon />}
               >
                 {t("RegisterSubmitBtn")}
               </Button>
