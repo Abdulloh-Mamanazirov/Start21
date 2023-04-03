@@ -206,7 +206,7 @@
     margin-bottom: 50px;
   }
   .start21Txt {
-    font-size: 85px;
+    font-size: 80px;
   }
   .headerTxt {
     padding-bottom: 0;
@@ -262,7 +262,7 @@
 
 @media (max-width:400px) {
   .start21Txt{
-    font-size: 65px;
+    font-size: 62px;
   }
   .headerText{
     font-size: 20px;
