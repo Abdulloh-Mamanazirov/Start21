@@ -104,7 +104,6 @@ function Navbar(props) {
             sx={{
               flexGrow: 1,
               display: { xs: "block", sm: "block" },
-              fontSize: "33px",
               fontSize: { xs: "21px",sm:"33px", md: "33px", lg: "33px", xl: "33px" },
             }}
           >

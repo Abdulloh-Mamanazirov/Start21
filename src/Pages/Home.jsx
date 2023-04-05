@@ -53,19 +53,19 @@ const Home = () => {
         <header className="homeHeader py-5 flex items-center">
           <div className="headerTxt w-1/2 ">
             <Chip
-              sx={{ color: "#dcdcdc", fontWeight: "bolder" }}
+              sx={{ color: "#dcdcdc", fontWeight: "bolder", userSelect:"none" }}
               label={t("Years")}
               variant="outlined"
             />
-            <h1 className="start21Txt text-9xl font-bold py-5">
+            <h1 className="start21Txt text-9xl font-bold py-5 select-none">
               START <span className="text-red-600">21</span>
             </h1>
-            <p className="text-4xl headerText">
+            <p className="text-4xl headerText select-none">
               Study <span className="text-red-500">Smarter</span>, Not Harder!
             </p>
             <Link
               to="/register"
-              className="regbtn inline-block text-xl mt-5 border-white rounded-xl p-2 "
+              className="regbtn select-none inline-block text-xl mt-5 border-white rounded-xl p-2 "
             >
               {t("RegisterLinkBtn")}
               <i className="fa-solid fa-chevron-right pl-1 mytransition"></i>
@@ -86,15 +86,15 @@ const Home = () => {
             {t("WhyText")}
           </p>
           <div className="whyCards flex items-center justify-evenly py-16 text-xl">
-            <span className="flex flex-col items-center gap-8 p-4 pt-9 rounded-lg bg-gray-500 bg-opacity-60">
+            <span className="flex flex-col items-center gap-8 p-4 pt-9 rounded-lg bg-gray-500 bg-opacity-60 transition-all hover:scale-105 hover:shadow-md hover:shadow-gray-400">
               <i className="fa-2xl fa-solid fa-chalkboard-user"></i>
               {t("CreativeTeachers")}
             </span>
-            <span className="flex flex-col items-center gap-8 p-4 pt-9 rounded-lg bg-gray-500 bg-opacity-60">
+            <span className="flex flex-col items-center gap-8 p-4 pt-9 rounded-lg bg-gray-500 bg-opacity-60 transition-all hover:scale-105 hover:shadow-md hover:shadow-gray-400">
               <i className="fa-2xl fa-solid fa-globe"></i>
               {t("EnglishEnvironment")}
             </span>
-            <span className="flex flex-col items-center gap-8 p-4 pt-9 rounded-lg bg-gray-500 bg-opacity-60">
+            <span className="flex flex-col items-center gap-8 p-4 pt-9 rounded-lg bg-gray-500 bg-opacity-60 transition-all hover:scale-105 hover:shadow-md hover:shadow-gray-400">
               <i className="fa-2xl fa-solid fa-award"></i>
               {t("HighScores")}
             </span>
