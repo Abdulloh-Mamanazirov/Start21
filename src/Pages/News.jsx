@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import NewsCard from '../Components/NewsCard';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet';
 
 const News = () => {
   const [width, setWidth] = useState(0)

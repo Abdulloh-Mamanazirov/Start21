@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import {useTranslation} from "react-i18next"
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const {t} = useTranslation()

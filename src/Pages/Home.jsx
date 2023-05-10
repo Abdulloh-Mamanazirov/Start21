@@ -10,6 +10,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const { t } = useTranslation();
