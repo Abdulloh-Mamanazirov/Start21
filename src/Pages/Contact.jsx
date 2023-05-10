@@ -7,6 +7,10 @@ const Contact = () => {
   const {t} = useTranslation()
   return (
     <div className="homebg text-white pt-4">
+      <Helmet>
+        <title>START 21 • Contact</title>
+        <meta name="description" content="Contact START21" />
+      </Helmet>
       <Navbar />
       <div className="container w-10/12 mx-auto pb-5">
         <div className="contactWrapper flex items-center gap-14">
@@ -81,7 +85,8 @@ const Contact = () => {
         </div>
         <div>
           <h2 className="contactInfoHeader text-center text-[55px] font-bold pt-10">
-            {t("contactText")} <span className="text-red-500">{t("contactTextEnd")}</span>
+            {t("contactText")}{" "}
+            <span className="text-red-500">{t("contactTextEnd")}</span>
           </h2>
           <div>
             <span className="telNum w-full flex justify-around flex-wrap text-xl pt-3">
@@ -90,23 +95,38 @@ const Contact = () => {
               <a href="tel:">+998 89 654 68 89</a>
             </span>
             <span className="flex-wrap flex items-center justify-evenly py-5">
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://t.me/effortless_education">
+              <a
+                className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg"
+                href="https://t.me/effortless_education"
+              >
                 <i className="fa-2xl pr-3 fa-brands fa-telegram text-sky-600"></i>
                 Telegram
               </a>
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://www.instagram.com/effortlesseducation/?hl=en">
+              <a
+                className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg"
+                href="https://www.instagram.com/effortlesseducation/?hl=en"
+              >
                 <i className="fa-2xl pr-3 fa-brands fa-instagram text-pink-500"></i>
                 Instagram
               </a>
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://facebook.com/Start21.lc">
+              <a
+                className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg"
+                href="https://facebook.com/Start21.lc"
+              >
                 <i className="fa-2xl pr-3 fa-brands fa-facebook text-blue-600"></i>
                 Facebook
               </a>
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://www.youtube.com/@Start21">
+              <a
+                className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg"
+                href="https://www.youtube.com/@Start21"
+              >
                 <i className="fa-2xl pr-3 fa-brands fa-youtube text-red-600"></i>
                 YouTube
               </a>
-              <a className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg" href="https://tiktok.com/@effortlesseducation">
+              <a
+                className="hover:bg-opacity-90 p-4 my-2 text-black bg-slate-100 bg-opacity-70 rounded-lg"
+                href="https://tiktok.com/@effortlesseducation"
+              >
                 <i className="fa-2xl pr-3 fa-brands fa-tiktok text-black"></i>
                 TikTok
               </a>

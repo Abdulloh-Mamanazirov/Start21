@@ -44,6 +44,10 @@ const Register = () => {
 
   return (
     <div className="homebg text-white pt-4 min-h-screen flex flex-col justify-between">
+      <Helmet>
+        <title>START 21 • Register</title>
+        <meta name="description" content="Register to our courses. START21 learnig center" />
+      </Helmet>
       <Navbar />
       <section className="container w-10/12 mx-auto py-5">
         <h2 className="resultsHeader text-center text-[50px] font-bold py-3 pb-10">
@@ -100,7 +104,7 @@ const Register = () => {
               <option value="DTM">DTM</option>
             </select>
             <Button
-            ref={button}
+              ref={button}
               type="submit"
               sx={{ padding: "10px", fontSize: "17px" }}
               variant="contained"

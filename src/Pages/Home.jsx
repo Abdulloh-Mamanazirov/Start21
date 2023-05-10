@@ -47,6 +47,10 @@ const Home = () => {
 
   return (
     <div className="homebg text-white pt-4">
+      <Helmet>
+        <title>START21</title>
+        <meta name="description" content="START21 learning center" />
+      </Helmet>
       <Navbar />
       <div className="container w-10/12 mx-auto">
         {/* Header */}

@@ -14,6 +14,10 @@ const News = () => {
   
   return (
     <div className="homebg text-white pt-4">
+      <Helmet>
+        <title>START 21 • News</title>
+        <meta name="description" content="Read the news about START21 learning center" />
+      </Helmet>
       <Navbar />
       <div className="container w-10/12 mx-auto pb-5">
         <section>
