@@ -7,6 +7,7 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+        website_title:"Learning Center",
         // Navbar
         Nav_Home_Link: "Home",
         Nav_About_Link: "Courses",
@@ -63,6 +64,7 @@ i18n.use(initReactI18next).init({
     },
     uz: {
       translation: {
+        website_title:"O'quv Markazi",
         // Navbar
         Nav_Home_Link: "Bosh Sahifa",
         Nav_About_Link: "Kurslar",
@@ -121,6 +123,7 @@ i18n.use(initReactI18next).init({
     },
     ru: {
       translation: {
+        website_title:"Учебный центр",
         // Navbar
         Nav_Home_Link: "Главная страница",
         Nav_About_Link: "Курсы",

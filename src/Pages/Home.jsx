@@ -49,8 +49,8 @@ const Home = () => {
   return (
     <div className="homebg text-white pt-4">
       <Helmet>
-        <title>START21</title>
-        <meta name="description" content="START21 learning center" />
+        <title>START 21 {t("website_title")}</title>
+        <meta name="description" content="START 21 Learning Center in Namangan. Build your future with us! START21 is just another level." />
       </Helmet>
       <Navbar />
       <div className="container w-10/12 mx-auto">
@@ -58,7 +58,11 @@ const Home = () => {
         <header className="homeHeader py-5 flex items-center">
           <div className="headerTxt w-1/2 ">
             <Chip
-              sx={{ color: "#dcdcdc", fontWeight: "bolder", userSelect:"none" }}
+              sx={{
+                color: "#dcdcdc",
+                fontWeight: "bolder",
+                userSelect: "none",
+              }}
               label={t("Years")}
               variant="outlined"
             />
@@ -167,7 +171,7 @@ const Home = () => {
             <img
               className="registerImg w-1/2 rounded-xl"
               src="/registerImg.jpg"
-              alt="start21"
+              alt="start 21"
             />
             <form
               onSubmit={handleSubmit}
@@ -208,7 +212,7 @@ const Home = () => {
                 type="submit"
                 sx={{ padding: "10px", fontSize: "17px" }}
                 variant="contained"
-              endIcon={<SendIcon />}
+                endIcon={<SendIcon />}
               >
                 {t("RegisterSubmitBtn")}
               </Button>
