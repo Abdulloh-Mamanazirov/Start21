@@ -27,6 +27,7 @@ const About = () => {
           name="description"
           content="Start 21 o'quv markazidagi kurslar. Get to know the courses that are taught at START21"
         />
+        <link rel="canonical" href="/about"/>
       </Helmet>
       <Navbar />
       <div className="container w-10/12 mx-auto">

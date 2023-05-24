@@ -17,13 +17,18 @@ const News = () => {
     <div className="homebg text-white pt-4">
       <Helmet>
         <title>START 21 • News</title>
-        <meta name="description" content="Start 21 o'quv markazidagi yangiliklar. Read the news about START21 learning center" />
+        <meta
+          name="description"
+          content="Start 21 o'quv markazidagi yangiliklar. Read the news about START21 learning center"
+        />
+        <link rel="canonical" href="/news" />
       </Helmet>
       <Navbar />
       <div className="container w-10/12 mx-auto pb-5">
         <section>
           <h2 className="resultsHeader text-center text-[50px] font-bold py-10">
-            {t("NewsHeader")} <span className="text-red-500">{t("NewsHeaderEnd")}</span>
+            {t("NewsHeader")}{" "}
+            <span className="text-red-500">{t("NewsHeaderEnd")}</span>
           </h2>
           <div>
             <div className="h-[470px] rounded-xl flex gap-5 pb-10 newsWrapper">
@@ -51,9 +56,10 @@ const News = () => {
             <div className="flex flex-wrap justify-center gap-3">
               {Array(width > 1000 ? 4 : 2)
                 .fill(0)
-                .map((card,index) => {
+                .map((card, index) => {
                   return (
-                    <NewsCard key={index}
+                    <NewsCard
+                      key={index}
                       image="/start_21.jpg"
                       name="Lorem ipsum"
                       seen={Math.round(Math.random() * 100)}

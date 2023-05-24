@@ -50,7 +50,11 @@ const Home = () => {
     <div className="homebg text-white pt-4">
       <Helmet>
         <title>START 21 {t("website_title")}</title>
-        <meta name="description" content="START 21 Learning Center in Namangan. Build your future with us! START21 is just another level." />
+        <meta
+          name="description"
+          content="Start21 o'quv markazi. START 21 Learning Center in Namangan. Build your future with us! START21 is just another level."
+        />
+        <link rel="canonical" href="/" />
       </Helmet>
       <Navbar />
       <div className="container w-10/12 mx-auto">

@@ -47,7 +47,11 @@ const Register = () => {
     <div className="homebg text-white pt-4 min-h-screen flex flex-col justify-between">
       <Helmet>
         <title>START 21 • Register</title>
-        <meta name="description" content="Register to our courses. START21 learnig center" />
+        <meta
+          name="description"
+          content="Register to our courses. START21 O'quv markazi. Kurslarimizga ro'yxatdan o'ting"
+        />
+        <link rel="canonical" href="/register" />
       </Helmet>
       <Navbar />
       <section className="container w-10/12 mx-auto py-5">

@@ -10,7 +10,11 @@ const Contact = () => {
     <div className="homebg text-white pt-4">
       <Helmet>
         <title>START 21 • Contact</title>
-        <meta name="description" content="Start 21 o'quv markazi bilan bog'lanish. Contact START21" />
+        <meta
+          name="description"
+          content="Start 21 o'quv markazi bilan bog'lanish. Contact START21"
+        />
+        <link rel="canonical" href="/contact" />
       </Helmet>
       <Navbar />
       <div className="container w-10/12 mx-auto pb-5">
