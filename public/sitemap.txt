@@ -1,0 +1,5 @@
+https://start-21.netlify.app/
+https://start-21.netlify.app/about
+https://start-21.netlify.app/news
+https://start-21.netlify.app/contact
+https://start-21.netlify.app/register
