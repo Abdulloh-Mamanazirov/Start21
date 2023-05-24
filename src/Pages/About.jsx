@@ -25,7 +25,7 @@ const About = () => {
         <title>START 21 • Courses</title>
         <meta
           name="description"
-          content="Get to know the courses that START21 offer"
+          content="Start 21 o'quv markazidagi kurslar. Get to know the courses that are taught at START21"
         />
       </Helmet>
       <Navbar />
