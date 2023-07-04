@@ -95,9 +95,9 @@ const Contact = () => {
           </h2>
           <div>
             <span className="telNum w-full flex justify-around flex-wrap text-xl pt-3">
-              <a href="tel:">+998 91 234 56 78</a>
-              <a href="tel:">+998 12 345 67 89</a>
-              <a href="tel:">+998 89 654 68 89</a>
+              <a href="tel:+998972596666">+998 97 259 66 66</a>
+              <a href="tel:+998972163333">+998 97 216 33 33</a>
+              <a href="tel:+998939117951">+998 93 911 79 51</a>
             </span>
             <span className="flex-wrap flex items-center justify-evenly py-5">
               <a
