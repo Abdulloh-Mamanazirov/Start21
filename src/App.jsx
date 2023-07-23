@@ -1,4 +1,5 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
@@ -15,6 +16,13 @@ function App() {
     setShow(false);
   },2100)
 
+  useEffect(()=>{
+    async function checkServer(){
+      await axios.get()
+    }
+    checkServer()
+  },[])
+  
   return (
     <>
       {show ? (
