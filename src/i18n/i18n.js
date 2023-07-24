@@ -109,7 +109,7 @@ i18n.use(initReactI18next).init({
         RegisterHeader: "Ro'yxatdan O'ting",
         RegisterHeaderEnd: "Kurslarimizga",
         RegisterText:
-          "Ma'lumotlaringizni qoldiring, biz bilan aloqaga chiqamiz va agarda savollaringiz bo'lsa barchasiga javob berishga harakat qilamiz. Rahmat.",
+          "Ma'lumotlaringizni qoldiring, biz siz bilan aloqaga chiqamiz va agarda savollaringiz bo'lsa barchasiga javob berishga harakat qilamiz. Rahmat.",
         RegisterInputPlaceholder: "To'liq Ismingiz",
         RegisterSelectCourse: "Kurs tanlang",
         RegisterSubmitBtn: "Yuborish",

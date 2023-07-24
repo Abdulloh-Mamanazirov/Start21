@@ -18,7 +18,7 @@ function App() {
 
   useEffect(()=>{
     async function checkServer(){
-      await axios.get()
+      await axios.post('/register')
     }
     checkServer()
   },[])
