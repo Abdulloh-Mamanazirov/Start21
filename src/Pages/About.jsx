@@ -1,8 +1,6 @@
 import { Button } from '@mui/material';
-import { t } from 'i18next';
 import React from 'react'
-import { useRef } from 'react';
-import { useState } from 'react';
+import { useState, useRef } from "react";
 import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
@@ -10,7 +8,6 @@ import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 
 const About = () => {
-  let [hideButton,setHideButton] = useState(true);
   let englishBtn = useRef();
   let ieltsBtn = useRef();
   let intensiveBtn = useRef();
@@ -27,7 +24,7 @@ const About = () => {
           name="description"
           content="Start 21 o'quv markazidagi kurslar. Get to know the courses that are taught at START21"
         />
-        <link rel="canonical" href="/about"/>
+        <link rel="canonical" href="/about" />
       </Helmet>
       <Navbar />
       <div className="container w-10/12 mx-auto">
@@ -40,16 +37,7 @@ const About = () => {
             />
           </div>
           <p className="aboutTxt w-2/3 mx-auto py-4 text-center text-lg">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sint
-            reprehenderit nisi excepturi illo error. Iure est fugiat
-            perspiciatis, fuga praesentium aliquid obcaecati placeat minus,
-            suscipit maiores nulla, veritatis dolore ut sint sunt dolorem alias
-            delectus vel non? Suscipit temporibus consequatur maiores sed quos
-            ratione nobis, reiciendis, itaque dicta iure cum? Lorem, ipsum dolor
-            sit amet consectetur adipisicing elit. Obcaecati velit est incidunt
-            earum perspiciatis. Distinctio tempora sequi possimus ducimus illo
-            excepturi enim expedita facere voluptates mollitia! Est similique
-            debitis quidem!
+            {t("AboutText")}
           </p>
         </section>
         <section className="pb-5">

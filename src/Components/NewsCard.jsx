@@ -1,14 +1,16 @@
 import * as React from "react";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
+import {
+  CardActionArea,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 export default function NewsCard(props) {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   return (
     <Card
       className="newsCard hoverCard"
@@ -28,7 +30,7 @@ export default function NewsCard(props) {
           alt="news image"
         />
         <CardContent>
-          <Typography gutterBottom variant="h6" component="div">
+          <Typography className="news-card-title" variant="h6" component="p" minHeight={50}>
             {props.name}
           </Typography>
           <div className="text-sm flex items-center justify-between pt-3 opacity-80">
@@ -36,8 +38,11 @@ export default function NewsCard(props) {
               <i className="fa-regular fa-eye pr-2"></i>
               {props.seen}
             </span>
-            <Link to="/news" className="hover:text-sky-500 hover:decoration-sky-400 hover:underline">
-               {t("NewsLink")} <i className="fa-solid fa-chevron-right"></i>
+            <Link
+              to={`/news/${props.id}`}
+              className="hover:text-sky-500 hover:decoration-sky-400 hover:underline"
+            >
+              {t("NewsLink")} <i className="fa-solid fa-chevron-right"></i>
             </Link>
           </div>
         </CardContent>

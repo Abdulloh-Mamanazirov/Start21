@@ -93,7 +93,7 @@ const Footer = () => {
           <Link className="opacity-75 hover:opacity-100" to="/contact">
             {t("Nav_Contact_Link")}
           </Link>
-          <Link className="opacity-75 hover:opacity-100" to="/news">
+          <Link className="opacity-75 hover:opacity-100" to="/news/3">
             {t("Nav_News_Link")}
           </Link>
           <Link className="opacity-75 hover:opacity-100" to="/register">

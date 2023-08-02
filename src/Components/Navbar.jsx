@@ -68,7 +68,7 @@ function Navbar(props) {
           <Link to="/contact">{t("Nav_Contact_Link")}</Link>
         </Button>
         <Button sx={{ color: "#000" }}>
-          <Link to="/news">{t("Nav_News_Link")}</Link>
+          <Link to="/news/:id">{t("Nav_News_Link")}</Link>
         </Button>
         <Button sx={{ color: "#000" }}>
           <Link to="/register">{t("Nav_Register_Link")}</Link>
@@ -165,9 +165,9 @@ function Navbar(props) {
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
               <Link
-                to="/news"
+                to="/news/3"
                 className={
-                  location.pathname === "/news"
+                  location.pathname.startsWith("/news")
                     ? "underline underline-offset-2"
                     : ""
                 }

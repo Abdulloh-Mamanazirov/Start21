@@ -7,10 +7,10 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
-        website_title:"Learning Center",
+        website_title: "Learning Center",
         // Navbar
         Nav_Home_Link: "Home",
-        Nav_About_Link: "Courses",
+        Nav_About_Link: "About",
         Nav_Contact_Link: "Contact",
         Nav_News_Link: "News",
         Nav_Register_Link: "Register",
@@ -29,14 +29,17 @@ i18n.use(initReactI18next).init({
         TeamText: "Our ",
         TeamTextEnd: "Team",
         TeacherExperience: "years experience",
-        // Courses
+        // About
+        AboutText:
+          "Start21 is an English study center that was established in 2015 with the mission of providing high-quality language education to learners of all ages and levels. Since then, over 2000 students have studied at Start21 and improved their English skills in various areas such as speaking, writing, listening and reading. Start21 began with one branch in Namangan city, but due to its popularity and success, it has expanded to six branches across the city. Start21 offers a variety of courses and programs to suit the needs and goals of each student, such as general English, kids English, IELTS and CEFR  exam preparation, Russian classes and more. Start21 also has a team of qualified and experienced teachers who are passionate about teaching and helping students achieve their full potential. Start21 is more than just a study center, it is a community of learners who share a common interest in learning English and exploring new cultures and opportunities.",
         CourseHeader: "Courses",
         // News
         PostedDate: "Posted on :",
         NewsHeader: "Top",
         NewsHeaderEnd: "News",
-        NewsText: "Opening ceremony of a new branch",
-        NewsText2: "Start21 league is about to begin",
+        NewsNovdaSchool: "Novda School",
+        NewsStartLeague: "Start21 league is about to begin",
+        NewsBrainTrain: "The first season of Brain Train is about to begin",
         NewsLink: "Read more",
         // Results
         OurStudents: "Our Students' ",
@@ -64,10 +67,10 @@ i18n.use(initReactI18next).init({
     },
     uz: {
       translation: {
-        website_title:"O'quv Markazi",
+        website_title: "O'quv Markazi",
         // Navbar
         Nav_Home_Link: "Bosh Sahifa",
-        Nav_About_Link: "Kurslar",
+        Nav_About_Link: "Biz Haqimizda",
         Nav_Contact_Link: "Bog'lanish",
         Nav_News_Link: "Yangiliklar",
         Nav_Register_Link: "Ro'yxatdan o'tish",
@@ -80,21 +83,25 @@ i18n.use(initReactI18next).init({
         EnglishEnding: "tilini biz bilan o'rganishingiz kerak?",
         WhyText:
           "Darslarimiz qiziqarli, foydali va hamyonbop. Biz har tomondan eng samarali o'qituvchilarni ish bilan ta'minlaganimiz uchun, siz darslarni tez va yaxshi o'zlashtirasiz. Zamonaviy uslublar va yuqori malakali o'qituvchilar bilan biz sizga o'z maqsadlaringizga erishishingizga yordam bera olamiz.",
-        CreativeTeachers: "Yaratuvchan o'qituvchilar",
+        CreativeTeachers: "Tajribali o'qituvchilar",
         HighScores: "Yuqori IELTS natijalar",
         EnglishEnvironment: "Haqiqiy Ingliz tili muhiti",
         // Teachers
         TeamText: "Bizning ",
         TeamTextEnd: "Jamoa",
         TeacherExperience: "yillik tajriba",
-        // Courses
+        // About
+        AboutText:
+          "Start21 is an English study center that was established in 2015 with the mission of providing high-quality language education to learners of all ages and levels. Since then, over 2000 students have studied at Start21 and improved their English skills in various areas such as speaking, writing, listening and reading. Start21 began with one branch in Namangan city, but due to its popularity and success, it has expanded to six branches across the city. Start21 offers a variety of courses and programs to suit the needs and goals of each student, such as general English, kids English, IELTS and CEFR  exam preparation, Russian classes and more. Start21 also has a team of qualified and experienced teachers who are passionate about teaching and helping students achieve their full potential. Start21 is more than just a study center, it is a community of learners who share a common interest in learning English and exploring new cultures and opportunities.",
         CourseHeader: "Kurslar",
         // News
         PostedDate: "Chop etilgan sana :",
         NewsHeader: "So'nggi",
         NewsHeaderEnd: "Yangiliklar",
-        NewsText: "Yangi filialimizning ochilish marosimi",
-        NewsText2: "Start21 liga boshlanish arafasida",
+        NewsNovdaSchool: "Novda School",
+        NewsStartLeague: "Start21 liga boshlanish arafasida",
+        NewsBrainTrain:
+          "Brain Train musobaqasining birinchi mavsumi boshlanish arafasida",
         NewsLink: "Batafsil",
         // Results
         OurStudents: "O'quvchilarimizning ",
@@ -123,10 +130,10 @@ i18n.use(initReactI18next).init({
     },
     ru: {
       translation: {
-        website_title:"Учебный центр",
+        website_title: "Учебный центр",
         // Navbar
         Nav_Home_Link: "Главная страница",
-        Nav_About_Link: "Курсы",
+        Nav_About_Link: "О нас",
         Nav_Contact_Link: "Связаться с нами",
         Nav_News_Link: "Новости",
         Nav_Register_Link: "Зарегистрироваться",
@@ -146,14 +153,17 @@ i18n.use(initReactI18next).init({
         TeamText: "Наша ",
         TeamTextEnd: "Команда",
         TeacherExperience: "лет опыта",
-        // Courses
+        // About
+        AboutText:
+          "Start21 - это центр изучения английского языка, который был основан в 2015 году с целью предоставления высококачественного языкового образования учащимся всех возрастов и уровней. С тех пор более 2000 студентов прошли обучение в Start21 и улучшили свои знания английского языка в различных областях, таких как говорение, письмо, аудирование и чтение. Start21 начинался с одного филиала в городе Наманган, но благодаря своей популярности и успеху он расширился до шести филиалов по всему городу. Start21 предлагает различные курсы и программы в соответствии с потребностями и целями каждого студента, такие как общий английский, детский английский, подготовка к экзаменам IELTS и CEFR, занятия по русскому языку и многое другое. Start21 также имеет команду квалифицированных и опытных учителей, которые увлечены преподаванием и помогают студентам полностью раскрыть свой потенциал. Start21 - это больше, чем просто учебный центр, это сообщество учащихся, которые разделяют общий интерес к изучению английского языка и изучению новых культур и возможностей.",
         CourseHeader: "Курсы",
         // News
         PostedDate: "Дата публикации:",
         NewsHeader: "Последний",
         NewsHeaderEnd: "Новости",
-        NewsText: "Торжественное открытие нашего нового филиала",
-        NewsText2: "Старт лиги Start21 вот-вот начнется",
+        NewsNovdaSchool: "Novda School",
+        NewsStartLeague: "Старт лиги Start21 вот-вот начнется",
+        NewsBrainTrain: "Brain Train вот-вот начнется",
         NewsLink: "Читать далее",
         // Results
         OurStudents: "Результаты ",
