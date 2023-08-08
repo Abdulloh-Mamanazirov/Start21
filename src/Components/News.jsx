@@ -24,7 +24,7 @@ export default function NewsSlider() {
       {
         breakpoint: 720,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 2,
           centerMode: true,
         },
@@ -41,8 +41,9 @@ export default function NewsSlider() {
   };
   return (
     <Slider {...settings}>
-      {news.map((n) => (
+      {news.map((n, ind) => (
         <NewsCard
+          key={ind}
           image={n.image}
           exp={n.exp}
           name={t(n.name)}
