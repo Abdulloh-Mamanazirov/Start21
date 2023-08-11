@@ -68,7 +68,9 @@ function Navbar(props) {
           <Link to="/contact">{t("Nav_Contact_Link")}</Link>
         </Button>
         <Button sx={{ color: "#000" }}>
-          <Link to="/news/:id">{t("Nav_News_Link")}</Link>
+          <Link to={`/news/${Math.floor(Math.random() * 3) + 1}`}>
+            {t("Nav_News_Link")}
+          </Link>
         </Button>
         <Button sx={{ color: "#000" }}>
           <Link to="/register">{t("Nav_Register_Link")}</Link>
