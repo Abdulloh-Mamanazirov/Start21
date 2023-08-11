@@ -143,13 +143,13 @@ const Home = () => {
               </p>
             </span>
             <span className="flex flex-col items-center gap-4 ">
-              <CountUp enableScrollSpy end={117} className="scoree text-6xl" />
+              <CountUp enableScrollSpy end={317} className="scoree text-6xl" />
               <p className="text-xl font-bold opacity-70 scoreTxt">
                 {t("IeltsScore")} 7+
               </p>
             </span>
             <span className="flex flex-col items-center gap-4 ">
-              <CountUp enableScrollSpy end={220} className="scoree text-6xl" />
+              <CountUp enableScrollSpy end={270} className="scoree text-6xl" />
               <p className="text-xl font-bold opacity-70 scoreTxt">
                 {t("IeltsScore")} 6+
               </p>
