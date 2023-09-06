@@ -21,6 +21,7 @@ const Home = () => {
     phone: "+998",
     course: "",
   });
+  const [loading, setLoading] = useState(false)
 
   // Register
   function handleInputChange(e) {
@@ -42,7 +43,15 @@ const Home = () => {
       data.course === undefined
     )
       return toast(t("toastCourseErr"), { type: "error" });
-    await axios.post("/register", data);
+    let response = await axios
+      .post("/register", data)
+      .catch((err) => {
+        if (err) return err;
+      })
+      .finally(() => setLoading(false));
+    if (response?.response?.status) {
+      return toast(`${t("toastErr")}`, { type: "error" });
+    }
     toast(`${t("toastRegistered")}`, { type: "success" });
   }
 
@@ -216,9 +225,13 @@ const Home = () => {
                 type="submit"
                 sx={{ padding: "10px", fontSize: "17px" }}
                 variant="contained"
-                endIcon={<SendIcon />}
+                endIcon={loading ? "" : <SendIcon />}
               >
-                {t("RegisterSubmitBtn")}
+                {loading ? (
+                  <span className="fa-solid fa-spinner fa-spin-pulse" />
+                ) : (
+                  t("RegisterSubmitBtn")
+                )}
               </Button>
             </form>
           </div>
