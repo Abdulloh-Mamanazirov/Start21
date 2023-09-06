@@ -10,16 +10,17 @@ import Navbar from "../Components/Navbar";
 import { Helmet } from "react-helmet";
 
 const Register = () => {
-  const {t} = useTranslation()
+  const { t } = useTranslation();
   const navigate = useNavigate();
-  const button = useRef("")
+  const button = useRef("");
 
   const [data, setData] = useState({
     name: "",
     phone: "+998",
-    course: ""
+    course: "",
   });
-  
+  const [loading, setLoading] = useState(false);
+
   function handleInputChange(e) {
     setData((oldData) => ({
       ...oldData,
@@ -29,6 +30,7 @@ const Register = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
     if (data.name === "" || data.name === " ")
       return toast(t("toastNameErr"), { type: "error" });
     if (data.phone === "" || data.phone === " " || data.phone.length <= 12)
@@ -39,7 +41,15 @@ const Register = () => {
       data.course === undefined
     )
       return toast(t("toastCourseErr"), { type: "error" });
-    await axios.post("/register", data);
+    let response = await axios
+      .post("/register", data)
+      .catch((err) => {
+        if (err) return err;
+      })
+      .finally(() => setLoading(false));
+    if (response?.response?.status) {
+      return toast(`${t("toastErr")}`, { type: "error" });
+    }
     toast(`${t("toastRegistered")}`, { type: "success" });
   }
 
@@ -113,9 +123,9 @@ const Register = () => {
               type="submit"
               sx={{ padding: "10px", fontSize: "17px" }}
               variant="contained"
-              endIcon={<SendIcon />}
+              endIcon={loading ? '': <SendIcon />}
             >
-              {t("RegisterSubmitBtn")}
+              {loading ? <span className="fa-solid fa-spinner fa-spin-pulse"/> : t("RegisterSubmitBtn")}
             </Button>
           </form>
         </div>

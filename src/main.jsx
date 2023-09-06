@@ -20,7 +20,7 @@ import './index.css'
 
 // Axios
 axios.defaults.headers.common['Content-Type'] = "application/json"
-axios.defaults.baseURL = "https://start21-server.onrender.com";
+axios.defaults.baseURL = "http://localhost:2222";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>

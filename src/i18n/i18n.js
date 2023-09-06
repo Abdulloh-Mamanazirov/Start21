@@ -59,6 +59,7 @@ i18n.use(initReactI18next).init({
         RegisterSelectCourse: "Select a course",
         RegisterSubmitBtn: "Submit",
         // Toast
+        toastErr: "Please, check your inputs!",
         toastNameErr: "Please, enter your name!",
         toastPhoneErr: "Please, enter your phone number correctly!",
         toastCourseErr: "Please, select a course!",
@@ -121,6 +122,7 @@ i18n.use(initReactI18next).init({
         RegisterSelectCourse: "Kurs tanlang",
         RegisterSubmitBtn: "Yuborish",
         // Toast
+        toastErr: "Iltimos, ma'lumotlaringizni tekshiring!",
         toastNameErr: "Iltimos, ismingizni kiriting!",
         toastPhoneErr: "Iltimos, telefon raqamingizni tekshiring!",
         toastCourseErr: "Iltimos, kurs tanlang!",
@@ -183,6 +185,7 @@ i18n.use(initReactI18next).init({
         RegisterSelectCourse: "Выбрать курс",
         RegisterSubmitBtn: "Отправлять",
         // Toast
+        toastErr: "Пожалуйста, проверьте свои данные!",
         toastNameErr: "Пожалуйста, введите Ваше имя!",
         toastPhoneErr: "Пожалуйста, проверьте свой номер телефона!",
         toastCourseErr: "Пожалуйста, выберите курс!",
