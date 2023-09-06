@@ -33,6 +33,7 @@ const Home = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true)
     if (data.name === "" || data.name === " ")
       return toast(t("toastNameErr"), { type: "error" });
     if (data.phone === "" || data.phone === " " || data.phone.length <= 12)
