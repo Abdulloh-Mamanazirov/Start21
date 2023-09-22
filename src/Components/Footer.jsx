@@ -74,7 +74,7 @@ const Footer = () => {
             <li>
               <a
                 className="opacity-75 hover:opacity-100 hover:text-sky-500 hover:underline"
-                href="https://t.me/Mr_Abdulloh"
+                href="https://t.me/Educator_Ibrohim"
               >
                 Telegram
               </a>
