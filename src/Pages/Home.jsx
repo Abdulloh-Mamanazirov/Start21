@@ -167,7 +167,7 @@ const Home = () => {
           </div>
         </section>
         {/* Register */}
-        <section className="RegisterInHome my-8">
+        {/* <section className="RegisterInHome my-8">
           <h2 className="resultsHeader text-center text-[50px] font-bold py-3 pb-10">
             {t("NewsHeader") !== "So'nggi" ? (
               <>
@@ -236,7 +236,7 @@ const Home = () => {
               </Button>
             </form>
           </div>
-        </section>
+        </section> */}
       </div>
       <Footer />
     </div>

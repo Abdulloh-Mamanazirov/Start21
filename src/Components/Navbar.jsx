@@ -72,9 +72,9 @@ function Navbar(props) {
             {t("Nav_News_Link")}
           </Link>
         </Button>
-        <Button sx={{ color: "#000" }}>
+        {/* <Button sx={{ color: "#000" }}>
           <Link to="/register">{t("Nav_Register_Link")}</Link>
-        </Button>
+        </Button> */}
       </List>
     </Box>
   );
@@ -183,7 +183,7 @@ function Navbar(props) {
                 {t("Nav_News_Link")}
               </Link>
             </Button>
-            <Button
+            {/* <Button
               className="navLinkBtn "
               sx={{ color: "#fff", fontSize: "17px", marginRight: "7px" }}
             >
@@ -197,7 +197,7 @@ function Navbar(props) {
               >
                 {t("Nav_Register_Link")}
               </Link>
-            </Button>
+            </Button> */}
           </Box>
           <Dropdown
             menu={{ items }}
